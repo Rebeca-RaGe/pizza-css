@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+header {
+  padding: 2rem;
+  min-height: 25vh;
+  width: 100vw;
+  background: #ffcd3c;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+p {
+  font-size: 2rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.title {
+  font-variant: small-caps;
+  font-stretch: extra-expanded;
+  color: #bb3b0e; /*#3f3f44;*/
+}
+
+main {
+  width: 100vw;
+  height: 75vh;
+  margin: auto 0;
+  background: #f8f8f8;
+}
+
+.container {
+  max-width: 800px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+article {
+  padding: 2rem 2rem;
+}
+
+/* Border cheese */
+.border {
+  position: relative;
+  width: 28.5rem;
+  height: 28.5rem;
+  background: #ff9234;
+  border-radius: 50%;
+}
+
+/* Mass */
+.full {
+  position: absolute;
+  margin: 1.7rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background: #ffcd3c;
+}
+
+/* Cheese*/
+.cheese {
+  margin: 0.8rem;
+  width: 23.5rem;
+  height: 23.5rem;
+  border-radius: 50%;
+  background: #f6cd61;
+}
+
+/* Pepperoni */
+.pepperoni {
+  display: flex;
+  flex-direction: row;
+}
+
+.pepperoni ul {
+  list-style: none;
+}
+
+.pepperoni ul li > div {
+  margin: 0.5rem 0.4rem;
+  background: #d92027;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.pepperoni-1 {
+  margin-top: 6rem;
+  margin-left: 0.8rem;
+}
+
+.pepperoni-1 li,
+.pepperoni-1-b li {
+  padding-top: 0.5rem;
+}
+
+.pepperoni-2 {
+  margin-top: 2.5rem;
+}
+
+.pepperoni-2 li {
+  padding-top: 0.5rem;
+}
+
+.pepperoni-3 {
+  margin-top: 0.5rem;
+}
+
+.pepperoni-3 li {
+  padding-top: 0.6rem;
+}
+
+.pepperoni-4 {
+  margin-top: 0;
+}
+
+.pepperoni-4 li {
+  padding-top: 0.3rem;
+}
+
+.pepperoni-1-b {
+  margin-top: 7rem;
+}
+
+/* Slice of Pizza */
+.triangle {
+  position: relative;
+  height: 0;
+  width: 0;
+  z-index: 1;
+  border-right: 5rem solid transparent;
+  border-bottom: 15rem solid #f0a500;
+  border-left: 5rem solid transparent;
+  transform: rotate(-35deg);
+}
+
+/* Border of slice of pizza */
+.triangle::before {
+  position: absolute;
+  content: "";
+  top: 1px;
+  right: -80px;
+  z-index: -2;
+  border-right: 4.7rem solid transparent;
+  border-bottom: 14.7rem solid #ffcd3c;
+  border-left: 4.7rem solid transparent;
+  transform: rotate(-2deg);
+}
+
+/* Mass of slice of pizza*/
+.triangle::after {
+  position: absolute;
+  content: "";
+  height: 5rem;
+  width: 5rem;
+  bottom: -238px;
+  right: -80px;
+  border-right: 2.5rem solid transparent;
+  border-bottom: 1.3rem solid #ff9234;
+  border-left: 2.5rem solid transparent;
+  transform: rotate(-1deg);
+}
+
+/* Cheese triangle */
+.cheese-triangle {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 14px;
+  right: -70px;
+  border-right: 4rem solid transparent;
+  border-bottom: 13rem solid #f6cd61;
+  border-left: 4rem solid transparent;
+  transform: rotate(-2deg);
+}
+
+.mass-triangle {
+  position: absolute;
+  height: 5rem;
+  width: 4rem;
+  top: 204px;
+  right: -71px;
+  border-right: 1rem solid transparent;
+  border-bottom: 1.4rem solid #ff9234;
+  transform: rotate(182deg);
+}
+
+.cheese-triangle ul {
+  position: relative;
+  list-style: none;
+}
+
+.cheese-triangle ul li {
+  margin: 1.2rem;
+  background: #d92027;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.cheese-triangle ul:first-child {
+  top: 30px;
+  left: -35px;
+}
+
+.cheese-triangle .pepperoni-horizontal {
+  top: -50px;
+  right: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  transform: rotate(85deg);
+}
+
+.cheese-triangle .pepperoni-horizontal:first-child {
+  top: 10px;
+}
